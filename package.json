@@ -23,8 +23,7 @@
   },
   "cds": {
     "requires": {
-      "auth": "xsuaa",
-      "db": "hana"
+      "auth": "xsuaa"
     },
     "sql": {
       "native_hana_associations": false

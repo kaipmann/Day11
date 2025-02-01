@@ -5,12 +5,12 @@ annotate service.Interactions_Header with @(
         Data : [
             {
                 $Type : 'UI.DataField',
-                Label : 'partner',
+                Label : '{i18n>Partner}',
                 Value : partner,
             },
             {
                 $Type : 'UI.DataField',
-                Label : 'country_code',
+                Label : '{i18n>Country1}',
                 Value : country_code,
             },
         ],
@@ -26,14 +26,26 @@ annotate service.Interactions_Header with @(
     UI.LineItem : [
         {
             $Type : 'UI.DataField',
-            Label : 'partner',
+            Label : '{i18n>Partner}',
             Value : partner,
         },
         {
             $Type : 'UI.DataField',
-            Label : 'country_code',
+            Label : '{i18n>Country1}',
             Value : country_code,
         },
     ],
+    UI.HeaderInfo : {
+        TypeName : 'Interaction item',
+        TypeNamePlural : 'Interaction items',
+        Title : {
+            $Type : 'UI.DataField',
+            Value : country.name,
+        },
+    },
 );
+
+annotate service.Interactions_Header with {
+    country @Common.Text : country.descr
+};
 
